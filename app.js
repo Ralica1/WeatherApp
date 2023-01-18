@@ -48,6 +48,7 @@ class Weather {
     } catch (error) {
       console.error(error);
     } finally {
+      if(document.body.contains(this.loading))
       this.weatherInfo.removeChild(this.loading);
     }
   }
@@ -67,14 +68,9 @@ class Weather {
 const weather = new Weather();
 weather.init();
 
+// Event listener for theme button
 const themeButton = document.querySelector('#switch-theme-button');
 
-// Event listener for theme button
-themeButton.addEventListener('click', (e) => {
+themeButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
-  if (document.body.classList.contains('dark-theme')) {
-    themeButton.innerHTML = 'Light Theme';
-  } else {
-    themeButton.innerHTML = 'Dark Theme';
-  }
 });
