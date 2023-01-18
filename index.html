@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="form-control">
+          <label for="location">Location</label>
+          <input type="text" id="location" value="New York" />
+        </div>
+        <div class="form-control">
+          <label for="unit">Unit</label>
+          <select id="unit">
+            <option value="Fahrenheit">Fahrenheit</option>
+            <option value="Celsius">Celsius</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="weather-info" class="grid">
+        <div class="temperature"></div>
+        <div class="description"></div>
+        <div class="city"></div>
+      </div>
+      <button id="switch-theme-button" class="top-right">Toggle Theme</button>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
